@@ -138,7 +138,8 @@ export default function Home() {
                   <div>
                     <h3 className="text-[10px] lg:text-[11px] uppercase tracking-[0.3em] text-stone-400 mb-3 font-bold">Adresa & Provozovatel</h3>
                     <p className="text-base sm:text-xl font-light leading-relaxed text-stone-600 italic border-b-2 sm:border-b-0 sm:border-l-2 border-stone-200 pb-4 sm:pb-0 sm:pl-4">
-                      <strong>Kadeřnictví Magda</strong><br />
+                      <strong>Magda Kyšková</strong><br />
+                      <em>Kadeřnictví Magda</em><br />
                       2. května 903<br />
                       742 13 STUDÉNKA<br />
                       <span className="text-xs not-italic text-stone-500 block mt-2">
@@ -204,7 +205,7 @@ export default function Home() {
         {/* PATIČKA */}
         <footer className="py-12 bg-[#F7F5F0] text-center border-t border-stone-200 px-4 space-y-4">
           <p className="text-[10px] text-stone-500 uppercase tracking-[0.2em] font-medium leading-relaxed max-w-2xl mx-auto">
-            Provozovatel: Kadeřnictví Magda • IČO: 48737704 • Fyzická osoba zapsaná v živnostenském rejstříku.
+            Provozovatel: Magda Kyšková (Kadeřnictví Magda) • IČO: 48737704 • Fyzická osoba zapsaná v živnostenském rejstříku.
           </p>
           <p className="text-[9px] text-stone-400 uppercase tracking-[0.15em] leading-relaxed max-w-2xl mx-auto italic">
             K mimosoudnímu řešení spotřebitelských sporů z poskytování služeb je příslušná Česká obchodní inspekce (<a href="https://www.coi.cz" target="_blank" rel="noopener noreferrer" className="underline hover:text-stone-600">www.coi.cz</a>).
