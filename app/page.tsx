@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -78,7 +79,6 @@ export default function Home() {
                 { jmeno: "KOMBINOVANÉ BARVENÍ S MELÍREM + STŘIH + FOUKÁNÍ", cena: "od 1100,- Kč" }
               ].map((item, index) => (
                 <div key={index} className="group relative">
-                  {/* Na úzkém mobilu pod sebou, na širším vedle sebe */}
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-baseline border-b border-stone-300 pb-4 gap-1 sm:gap-0">
                     <span className="text-base sm:text-xl md:text-2xl group-hover:text-stone-400 transition-colors duration-300 tracking-tight">{item.jmeno}</span>
                     <span className="text-[#3A3A38] font-bold tracking-wider text-base sm:text-lg md:text-xl whitespace-nowrap sm:ml-4">{item.cena}</span>
@@ -95,7 +95,6 @@ export default function Home() {
         {/* SEKCE: O SALONU */}
         <section id="informace" className="min-h-screen bg-[#FDFCF8] flex flex-col justify-center px-4 sm:px-12 md:px-24 py-12 lg:py-24 text-stone-600">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
-            {/* Fotka pod textem na mobilu */}
             <div className="relative order-2 lg:order-1 w-full">
               <div className="hidden sm:block absolute -top-8 -left-8 w-64 h-64 bg-[#F4F2EE] -z-10"></div>
               <div className="bg-stone-200 aspect-[4/5] w-full relative overflow-hidden shadow-2xl rounded-sm block">
@@ -137,10 +136,15 @@ export default function Home() {
                 <h2 className="text-2xl sm:text-4xl font-light mb-8 lg:mb-12 uppercase tracking-[0.3em] text-stone-700 font-bold">Kontakt</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-center sm:text-left">
                   <div>
-                    <h3 className="text-[10px] lg:text-[11px] uppercase tracking-[0.3em] text-stone-400 mb-3 font-bold">Adresa</h3>
+                    <h3 className="text-[10px] lg:text-[11px] uppercase tracking-[0.3em] text-stone-400 mb-3 font-bold">Adresa & Provozovatel</h3>
                     <p className="text-base sm:text-xl font-light leading-relaxed text-stone-600 italic border-b-2 sm:border-b-0 sm:border-l-2 border-stone-200 pb-4 sm:pb-0 sm:pl-4">
+                      <strong>Kadeřnictví Magda</strong><br />
                       2. května 903<br />
-                      742 13 STUDÉNKA
+                      742 13 STUDÉNKA<br />
+                      <span className="text-xs not-italic text-stone-500 block mt-2">
+                        IČO: 48737704<br />
+                        Fyzická osoba zapsaná v živnostenském rejstříku
+                      </span>
                     </p>
                   </div>
                   <div>
@@ -186,7 +190,7 @@ export default function Home() {
                 </div>
               </div>
               <a
-                href="https://maps.google.com/?q=2.+května+903,+742+13+Studénka"
+                href="https://maps.google.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-16 bg-stone-800 text-white flex items-center justify-center hover:bg-stone-900 transition-all shadow-xl rounded-sm"
@@ -198,8 +202,20 @@ export default function Home() {
         </section>
 
         {/* PATIČKA */}
-        <footer className="py-12 bg-[#F7F5F0] text-center border-t border-stone-200 px-4">
-             <p className="text-[9px] sm:text-[10px] text-stone-400 uppercase tracking-[0.3em] font-bold leading-relaxed">Designováno pro Kadeřnictví Magda | Studénka 2026</p>
+        <footer className="py-12 bg-[#F7F5F0] text-center border-t border-stone-200 px-4 space-y-4">
+          <p className="text-[10px] text-stone-500 uppercase tracking-[0.2em] font-medium leading-relaxed max-w-2xl mx-auto">
+            Provozovatel: Kadeřnictví Magda • IČO: 48737704 • Fyzická osoba zapsaná v živnostenském rejstříku.
+          </p>
+          <p className="text-[9px] text-stone-400 uppercase tracking-[0.15em] leading-relaxed max-w-2xl mx-auto italic">
+            K mimosoudnímu řešení spotřebitelských sporů z poskytování služeb je příslušná Česká obchodní inspekce (<a href="https://www.coi.cz" target="_blank" rel="noopener noreferrer" className="underline hover:text-stone-600">www.coi.cz</a>).
+          </p>
+          <div className="flex justify-center gap-6 text-[10px] text-stone-500 uppercase tracking-[0.2em] font-bold pt-2">
+            <Link href="/gdpr" className="hover:text-stone-800 transition-colors underline">Ochrana osobních údajů</Link>
+            <Link href="/obchodni-podminky" className="hover:text-stone-800 transition-colors underline">Obchodní podmínky</Link>
+          </div>
+          <p className="text-[9px] sm:text-[10px] text-stone-400 uppercase tracking-[0.3em] font-bold leading-relaxed pt-4">
+            Designováno pro Kadeřnictví Magda | Studénka 2026
+          </p>
         </footer>
       </main>
     </div>
